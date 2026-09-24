@@ -13,8 +13,8 @@ public class LoopsPractice extends JPanel{
 		
 		//rectangle and quadrant setup
 		pen.drawRect(10, 10, 1000, 700);
-		pen.drawLine(10, 355, 1010, 355);
-		pen.drawLine(505, 10, 505, 710);
+		//pen.drawLine(10, 355, 1010, 355);
+		//pen.drawLine(505, 10, 505, 710);
 		
 		
 		verticalLines(pen);
@@ -30,22 +30,104 @@ public class LoopsPractice extends JPanel{
 		
 		for(int cntr = 0; cntr < 100; cntr++) {
 			
+			//draw the line
 			pen.drawLine(x1, y1, x2, y2);
 			
+			//update the points so the next
+			//line drawn is the next part of the picture
 			
+			//top point moves to the right
+			x2 += 20; //this is a guess, you must calculate
 			
-			x2 += 10;
-			
-			y1 -= 10;
+			//bottom left point moves up each iteration
+			y1 -= 14;
 			
 			
 		}
 		
+		/*
+		 * TOP-RIGHT
+		 */
+		//RESET POINT A AND B for your NEXT CORNER
 		
+		x1 = 1010;
+		y1 = 710;
+		x2 = 1010;
+		y2 = 10;
 		
+		for(int cntr = 0; cntr < 100; cntr++) {
+			
+			//draw the line
+			pen.drawLine(x1, y1, x2, y2);
+			
+			//update the points so the next
+			//line drawn is the next part of the picture
+			
+			//top point moves to the right
+			x2 -= 20; //this is a guess, you must calculate
+			
+			//bottom left point moves up each iteration
+			y1 -= 14;
+			
+			
+		}
 		
+		x1 = 10;
+		y1 = 710;
+		x2 = 1010;
+		y2 = 710;
 		
+		for(int cntr = 0; cntr < 100; cntr++) {
+			
+			//draw the line
+			pen.drawLine(x1, y1, x2, y2);
+			
+			//update the points so the next
+			//line drawn is the next part of the picture
+			
+			//top point moves to the right
+			x1 += 20; //this is a guess, you must calculate
+			
+			//bottom left point moves up each iteration
+			y2 -= 14;
+			
+			
+		}
 	
+		x1 = 1010;
+		y1 = 710;
+		x2 = 10;
+		y2 = 710;
+		
+		for(int cntr = 0; cntr < 100; cntr++) {
+			
+			//draw the line
+			pen.drawLine(x1, y1, x2, y2);
+			
+			//update the points so the next
+			//line drawn is the next part of the picture
+			
+			//top point moves to the right
+			x1 -= 20; //this is a guess, you must calculate
+			
+			//bottom left point moves up each iteration
+			y2 -= 14;
+			
+			
+		}
+		
+		for(int cntr = 0; cntr < 100; cntr++) {
+			
+			int xCenter = 505;
+			int yCenter = 355;
+			
+			while(cntr < 100) {
+				
+				
+				
+			}
+			
+		}
 	}
 	
 	/*
@@ -54,7 +136,7 @@ public class LoopsPractice extends JPanel{
 	 * with different colors per line
 	 */
 	public void verticalLines(Graphics pen) {
-		pen.drawString("vertical lines", 30, 40);
+		//pen.drawString("vertical lines", 30, 40);
 		
 		//1) setup variable representing point A and point B
 		//of the lines you're going to draw!
@@ -67,6 +149,7 @@ public class LoopsPractice extends JPanel{
 			
 			System.out.println("loops - does it loop");
 			
+			/*
 			//2) Draw the actual line using variables 
 			//generate random color
 			int red = (int)(Math.random()*(255-0+1))+0; //for colors it is between 0 - 255
@@ -82,6 +165,8 @@ public class LoopsPractice extends JPanel{
 			x2 += 2;
 			//3) update the variables dealing with the line
 			//such that the next line drawn is to the RIGHT of previous
+			*/
+			
 			count++; //update control variable
 			
 			/*
@@ -95,7 +180,7 @@ public class LoopsPractice extends JPanel{
 			
 		}
 
-		
+			
 	}
 		
 		
@@ -109,7 +194,7 @@ public class LoopsPractice extends JPanel{
 	 */
 	public void randomLines(Graphics pen) {
 		pen.setColor(Color.black);
-		pen.drawString("random lines", 520, 40);
+		//pen.drawString("random lines", 520, 40);
 		
 		int cntr = 0;
 		int pointX1;
@@ -118,7 +203,7 @@ public class LoopsPractice extends JPanel{
 		int pointY2;
 		
 				
-		while(cntr < 200) {
+		/*while(cntr < 200) {
 			
 			//generate random color
 			int red = (int)(Math.random()*(255-0+1))+0; //for colors it is between 0 - 255
@@ -137,7 +222,7 @@ public class LoopsPractice extends JPanel{
 			cntr++; //update control var else it'll be infinite loop
 			
 			
-		}
+		} */
 					
 			
 		
@@ -157,7 +242,7 @@ public class LoopsPractice extends JPanel{
 	 */
 	public void randomSquares(Graphics pen) {
 		pen.setColor(Color.black);
-		pen.drawString("random squares", 30, 390);
+		/*pen.drawString("random squares", 30, 390);
 		
 		int bottomLeft = 0;
 		
@@ -182,7 +267,7 @@ public class LoopsPractice extends JPanel{
 			bottomLeft++;
 
 		}
-		
+		*/
 		
 		
 				
@@ -198,7 +283,7 @@ public class LoopsPractice extends JPanel{
 	 */
 	public void randomCircles(Graphics pen) {
 		pen.setColor(Color.black);
-		pen.drawString("random circles", 520, 390);
+		/*pen.drawString("random circles", 520, 390);
 		
 		int bottomRight = 0;
 		
@@ -222,7 +307,7 @@ public class LoopsPractice extends JPanel{
 			bottomRight++;
 			
 		}
-		
+		*/
 	}
 	
 	
