@@ -23,7 +23,23 @@ public class LoopsPractice extends JPanel{
 		randomCircles(pen);
 		
 		
+		int x1 = 10;
+		int y1 = 710;
+		int x2 = 10;
+		int y2 = 10;
 		
+		for(int cntr = 0; cntr < 100; cntr++) {
+			
+			pen.drawLine(x1, y1, x2, y2);
+			
+			
+			
+			x2 += 10;
+			
+			y1 -= 10;
+			
+			
+		}
 		
 		
 		
