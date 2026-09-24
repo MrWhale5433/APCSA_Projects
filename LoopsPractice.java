@@ -47,20 +47,23 @@ public class LoopsPractice extends JPanel{
 		int y1 = 50;
 		int x2 = 25;
 		int y2 = 250;
-		while(count < 90) {
+		while(count < 200) {
 			
 			System.out.println("loops - does it loop");
 			
 			//2) Draw the actual line using variables 
+			//generate random color
 			int red = (int)(Math.random()*(255-0+1))+0; //for colors it is between 0 - 255
 			int green = (int)(Math.random()*(255-0+1))+0;
 			int blue = (int)(Math.random()*(255-0+1))+0;
 			Color randomColor = new Color(red, green, blue);
 			
 			pen.setColor(randomColor);
-				x1 += 5;
-				x2 += 5;
-				pen.drawLine(x1, y1, x2, y2);
+			
+			pen.drawLine(x1, y1, x2, y2);
+			
+			x1 += 2;
+			x2 += 2;
 			//3) update the variables dealing with the line
 			//such that the next line drawn is to the RIGHT of previous
 			count++; //update control variable
@@ -99,8 +102,9 @@ public class LoopsPractice extends JPanel{
 		int pointY2;
 		
 				
-		while(cntr < 2000) {
+		while(cntr < 200) {
 			
+			//generate random color
 			int red = (int)(Math.random()*(255-0+1))+0; //for colors it is between 0 - 255
 			int green = (int)(Math.random()*(255-0+1))+0;
 			int blue = (int)(Math.random()*(255-0+1))+0;
@@ -136,9 +140,37 @@ public class LoopsPractice extends JPanel{
 	 * bottom-left quadrant.
 	 */
 	public void randomSquares(Graphics pen) {
+		pen.setColor(Color.black);
 		pen.drawString("random squares", 30, 390);
 		
+		int bottomLeft = 0;
 		
+		
+		while(bottomLeft < 200) {
+			//generate random color
+			int red = (int)(Math.random()*(255-0+1))+0; //for colors it is between 0 - 255
+			int green = (int)(Math.random()*(255-0+1))+0;
+			int blue = (int)(Math.random()*(255-0+1))+0;
+			Color randomColor = new Color(red, green, blue);
+			pen.setColor(randomColor);
+			
+			int rectX;
+			int rectY;
+			
+			rectX = (int)(Math.random()*(455-10+1))+10;
+			rectY = (int)(Math.random()*(660-355+1))+355;
+			
+			pen.fillRect(rectX, rectY, 50, 50);
+			
+			
+			bottomLeft++;
+
+		}
+		
+		
+		
+				
+				
 	}
 	
 	/*
@@ -149,8 +181,31 @@ public class LoopsPractice extends JPanel{
 	 * bottom-right quadrant 
 	 */
 	public void randomCircles(Graphics pen) {
+		pen.setColor(Color.black);
 		pen.drawString("random circles", 520, 390);
 		
+		int bottomRight = 0;
+		
+		while(bottomRight < 200) {
+			
+			//generate random color
+			int red = (int)(Math.random()*(255-0+1))+0; //for colors it is between 0 - 255
+			int green = (int)(Math.random()*(255-0+1))+0;
+			int blue = (int)(Math.random()*(255-0+1))+0;
+			Color randomColor = new Color(red, green, blue);
+			pen.setColor(randomColor);
+			
+			
+			int width = (int)(Math.random()*(200-30+1))+30;
+			int circX = (int)(Math.random()*((1010-width)-505+1))+505;
+			int circY = (int)(Math.random()*((710-width)-355+1))+355;
+			
+			
+			pen.drawOval(circX, circY, width, width);
+			
+			bottomRight++;
+			
+		}
 		
 	}
 	
