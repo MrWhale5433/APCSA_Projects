@@ -16,6 +16,8 @@ public class LoopsPractice extends JPanel{
 		//pen.drawLine(10, 355, 1010, 355);
 		//pen.drawLine(505, 10, 505, 710);
 		
+		int xBounds = (1010/100); 
+		int yBounds = (710/100);
 		
 		verticalLines(pen);
 		randomLines(pen);
@@ -28,8 +30,17 @@ public class LoopsPractice extends JPanel{
 		int x2 = 10;
 		int y2 = 10;
 		
+		/*
+		 * TOP-LEFT
+		 */
 		for(int cntr = 0; cntr < 100; cntr++) {
 			
+			//generate random color
+			int red = (int)(Math.random()*(255-0+1))+0; //for colors it is between 0 - 255
+			int green = (int)(Math.random()*(255-0+1))+0;
+			int blue = (int)(Math.random()*(255-0+1))+0;
+			Color randomColor = new Color(red, green, blue);
+			pen.setColor(randomColor);
 			//draw the line
 			pen.drawLine(x1, y1, x2, y2);
 			
@@ -37,10 +48,10 @@ public class LoopsPractice extends JPanel{
 			//line drawn is the next part of the picture
 			
 			//top point moves to the right
-			x2 += 20; //this is a guess, you must calculate
+			x2 += xBounds; //this is a guess, you must calculate
 			
 			//bottom left point moves up each iteration
-			y1 -= 14;
+			y1 -= yBounds;
 			
 			
 		}
@@ -57,6 +68,12 @@ public class LoopsPractice extends JPanel{
 		
 		for(int cntr = 0; cntr < 100; cntr++) {
 			
+			//generate random color
+			int red = (int)(Math.random()*(255-0+1))+0; //for colors it is between 0 - 255
+			int green = (int)(Math.random()*(255-0+1))+0;
+			int blue = (int)(Math.random()*(255-0+1))+0;
+			Color randomColor = new Color(red, green, blue);
+			pen.setColor(randomColor);
 			//draw the line
 			pen.drawLine(x1, y1, x2, y2);
 			
@@ -64,10 +81,10 @@ public class LoopsPractice extends JPanel{
 			//line drawn is the next part of the picture
 			
 			//top point moves to the right
-			x2 -= 20; //this is a guess, you must calculate
+			x2 -= xBounds; //this is a guess, you must calculate
 			
 			//bottom left point moves up each iteration
-			y1 -= 14;
+			y1 -= yBounds;
 			
 			
 		}
@@ -76,9 +93,17 @@ public class LoopsPractice extends JPanel{
 		y1 = 710;
 		x2 = 1010;
 		y2 = 710;
-		
+		/*
+		 * Bottom-RIGHT
+		 */
 		for(int cntr = 0; cntr < 100; cntr++) {
 			
+			//generate random color
+			int red = (int)(Math.random()*(255-0+1))+0; //for colors it is between 0 - 255
+			int green = (int)(Math.random()*(255-0+1))+0;
+			int blue = (int)(Math.random()*(255-0+1))+0;
+			Color randomColor = new Color(red, green, blue);
+			pen.setColor(randomColor);
 			//draw the line
 			pen.drawLine(x1, y1, x2, y2);
 			
@@ -86,10 +111,10 @@ public class LoopsPractice extends JPanel{
 			//line drawn is the next part of the picture
 			
 			//top point moves to the right
-			x1 += 20; //this is a guess, you must calculate
+			x1 += xBounds; //this is a guess, you must calculate
 			
 			//bottom left point moves up each iteration
-			y2 -= 14;
+			y2 -= yBounds;
 			
 			
 		}
@@ -99,8 +124,17 @@ public class LoopsPractice extends JPanel{
 		x2 = 10;
 		y2 = 710;
 		
+		/*
+		 * BOTTOM-LEFT
+		 */
 		for(int cntr = 0; cntr < 100; cntr++) {
 			
+			//generate random color
+			int red = (int)(Math.random()*(255-0+1))+0; //for colors it is between 0 - 255
+			int green = (int)(Math.random()*(255-0+1))+0;
+			int blue = (int)(Math.random()*(255-0+1))+0;
+			Color randomColor = new Color(red, green, blue);
+			pen.setColor(randomColor);
 			//draw the line
 			pen.drawLine(x1, y1, x2, y2);
 			
@@ -108,26 +142,18 @@ public class LoopsPractice extends JPanel{
 			//line drawn is the next part of the picture
 			
 			//top point moves to the right
-			x1 -= 20; //this is a guess, you must calculate
+			x1 -= xBounds; //this is a guess, you must calculate
 			
 			//bottom left point moves up each iteration
-			y2 -= 14;
+			y2 -= yBounds;
 			
 			
 		}
+		x1 = 1010;
+		y1 = 710;
+		x2 = 10;
+		y2 = 710;
 		
-		for(int cntr = 0; cntr < 100; cntr++) {
-			
-			int xCenter = 505;
-			int yCenter = 355;
-			
-			while(cntr < 100) {
-				
-				
-				
-			}
-			
-		}
 	}
 	
 	/*
@@ -180,7 +206,7 @@ public class LoopsPractice extends JPanel{
 			
 		}
 
-			
+		
 	}
 		
 		
