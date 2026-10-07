@@ -45,6 +45,7 @@ public class Frame extends JPanel implements ActionListener {
             @Override
             public void mousePressed(MouseEvent event) {
                 world.handleClick(event.getX(), event.getY());
+                laser.play();
             }
         });
 
