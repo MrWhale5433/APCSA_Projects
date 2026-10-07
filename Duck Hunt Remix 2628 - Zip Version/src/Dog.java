@@ -50,6 +50,19 @@ public class Dog extends Sprite {
         }
 
         // Write your Dog movement code here.
+        if(x < targetX) {
+        	x += 10;
+        }
+        if(x > targetX) {
+        	x -= 10; 
+        }
+        if(x == targetX) {
+        	retrievedDuck = true;
+        }
+        else{
+        	retrieving = false;
+        }
+        
     }
 
     public boolean isRetrieving() {
